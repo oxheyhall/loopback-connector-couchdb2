@@ -21,6 +21,8 @@ var config = {
   retryTimeout: 50,
 };
 
+var options = {};
+
 console.log('env config ', config);
 
 global.config = config;
@@ -56,7 +58,7 @@ global.getDataSource = global.getSchema = function(customConfig) {
       var self = this;
       var idName = self.idName(model);
       var id = data[idName];
-      var mo = self.selectModel(model);
+      var mo = self.selectModel(model, options);
       data[idName] = id.toString();
 
       mo.db.get(id, function(err, doc) {
@@ -69,16 +71,16 @@ global.getDataSource = global.getSchema = function(customConfig) {
             cb(null, self.fromDB(model, mo, doc));
           });
         };
-        self._insert(model, data, saveHandler);
+        self._insert(model, data, options, saveHandler);
       });
     }
   };
 
-  overrideConnector._insert = function(model, data, cb) {
+  overrideConnector._insert = function(model, data, options, cb) {
     if (!global.IMPORTED_TEST) {
-      return originalConnector._insert(model, data, cb);
+      return originalConnector._insert(model, data, options, cb);
     } else {
-      originalConnector._insert(model, data, function(err, rid, rrev) {
+      originalConnector._insert(model, data, options, function(err, rid, rrev) {
         if (err) return cb(err);
         cb(null, rid);
       });
