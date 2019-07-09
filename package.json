@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-couchdb2",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "publishConfig": {
     "export-tests": true
   },
@@ -8,6 +8,7 @@
   "engines": {
     "node": ">=6"
   },
+  "author": "IBM Corp.",
   "keywords": [
     "IBM",
     "StrongLoop",
@@ -28,11 +29,11 @@
   "dependencies": {
     "async": "^1.5.0",
     "debug": "^3.1.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.11",
     "loopback-connector": "^4.0.0",
     "nano": "^6.4.2",
     "request": "^2.81.0",
-    "strong-globalize": "^3.1.0"
+    "strong-globalize": "^4.1.2"
   },
   "devDependencies": {
     "dockerode": "^2.4.3",
