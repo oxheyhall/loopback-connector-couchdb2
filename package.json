@@ -2,7 +2,8 @@
   "name": "loopback-connector-couchdb2",
   "version": "1.6.4",
   "publishConfig": {
-    "export-tests": true
+    "export-tests": true,
+    "registry": "https://npm.pkg.github.com/"
   },
   "description": "LoopBack Connector for CouchDB 2.0",
   "engines": {
@@ -51,11 +52,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/strongloop/loopback-connector-couchdb2.git"
+    "url": "git://github.com/oxheyhall/loopback-connector-couchdb2.git"
   },
-  "homepage": "https://github.com/strongloop/loopback-connector-couchdb2",
+  "homepage": "https://github.com/oxheyhall/loopback-connector-couchdb2",
   "bugs": {
-    "url": "https://github.com/strongloop/loopback-connector-couchdb2/issues"
+    "url": "https://github.com/oxheyhall/loopback-connector-couchdb2/issues"
   },
   "license": "Apache-2.0"
 }
