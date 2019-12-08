@@ -1,6 +1,6 @@
 {
   "name": "loopback-connector-couchdb2",
-  "version": "1.7.6",
+  "version": "1.7.7",
   "publishConfig": {
     "export-tests": true,
     "registry": "https://npm.pkg.github.com/"
